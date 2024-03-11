@@ -16,10 +16,12 @@ function Login({ onLoginSuccessful }) {
     const loginResult = await login({ email, password });
     if (!loginResult) setHasError(true);
     else {
-      const { name, token } = loginResult;
+      const { title, firstname, lastname, picture } = loginResult;
       // Save user IDs on local storage
-      localStorage.setItem("name", name);
-      localStorage.setItem("token", token);
+      localStorage.setItem("title", title);
+      localStorage.setItem("firstname", firstname);
+      localStorage.setItem("lastname", lastname);
+      localStorage.setItem("picture", picture);
       onLoginSuccessful();
     }
   };

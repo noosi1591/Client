@@ -34,3 +34,5 @@ export async function searchArtworks({ keyword }) {
       console.log(err);
     });
 }
+
+
