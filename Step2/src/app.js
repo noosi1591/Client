@@ -8,7 +8,6 @@ import Header from './components/Header';
 import UsersList from './components/UsersList';
 import './css/styles.css';
 
-
 class App extends React.Component {
     componentDidMount() {
         axios.get('https://randomuser.me/api/?page=1&results=10')
@@ -20,11 +19,12 @@ class App extends React.Component {
     render() {
         return (
             <div className="main-section">
-                <Header />
-                <UsersList />
+                <Header />              
+                <UsersList />                          
             </div>
-        )
-    }
+        )          
+ 
+    }  
 }
 
 ReactDOM.render(
@@ -32,3 +32,4 @@ ReactDOM.render(
         <App />
     </Provider>,
 document.getElementById('root'));
+
